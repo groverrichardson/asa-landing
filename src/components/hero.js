@@ -5,7 +5,7 @@ import HeroImg from '../assets/hero.jpeg';
 
 function Hero() {
     return (
-        <section className="bg-cover flex flex-row flex-wrap h-screen max-h-96 relative">
+        <section className="bg-cover flex flex-row flex-wrap h-screen md:max-h-96 relative mb-48">
             <header className="flex items-center justify-between px-5 py-2 w-full self-start">
                 <img
                     src={Logo}
@@ -18,7 +18,7 @@ function Hero() {
                 <div className="hero-copy-container w-full md:w-1/2 p-12 md:px-12 md:py-0 lg:p-24 relative md:static overflow-x-hidden">
                     <h1 className="whitespace-pre-wrap text-5xl text-primary font-work tracking-tighter font-bold">
                         Quality you can trust,{' '}
-                        <span className="text-secondary">solar</span> you can
+                        <span className="text-tertiary">solar</span> you can
                         depend on.
                     </h1>
                     <div className="decorative-line h-2 bg-secondary mt-2 absolute w-screen md:w-3/4 -z-10"></div>
@@ -33,7 +33,7 @@ function Hero() {
                     <img
                         src={HeroImg}
                         alt="Residential home with solar panels installed"
-                        className="object-cover object-right xl:object-left h-72 flex-1 md:flex-none mt-16 md:mt-0 md:h-96 w-3/4 shadow-xl absolute md:static"
+                        className="object-cover object-right xl:object-left h-72 flex-1 md:flex-none mt-12 md:mt-0 md:h-96 w-3/4 shadow-xl absolute md:static border-4 border-white p-5"
                     />
                 </div>
             </section>
