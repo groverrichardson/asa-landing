@@ -4,10 +4,8 @@ import Button from './button';
 import HeroImg from '../assets/hero.jpeg';
 
 function Hero() {
-    const heroHeader = 'Quality you can trust\nSolar you can trust';
-
     return (
-        <section className="bg-cover flex flex-row flex-wrap h-screen">
+        <section className="bg-cover flex flex-row flex-wrap h-screen max-h-96">
             <header className="flex items-center justify-between px-5 py-2 w-full self-start">
                 <img
                     src={Logo}
@@ -16,12 +14,14 @@ function Hero() {
                 />
                 <Button visibility="invisible sm:visible" />
             </header>
-            <section className="flex flex-row content-center justify-center flex-wrap md:flex-1">
-                <div className="hero-copy-container w-full md:w-1/2 p-12 md:p-24">
+            <section className="flex flex-row content-center justify-center flex-wrap md:flex-1 md:py-5">
+                <div className="hero-copy-container w-full md:w-1/2 p-12 md:px-12 md:py-0 lg:p-24">
                     <h1 className="whitespace-pre-wrap text-5xl text-primary font-work tracking-tighter font-bold">
-                        {heroHeader}
+                        Quality you can trust,{' '}
+                        <span className="text-secondary">solar</span> you can
+                        depend on.
                     </h1>
-                    <div className="decorative-line h-2 bg-secondary mt-2 absolute w-3/4 -z-10"></div>
+                    <div className="decorative-line h-2 bg-secondary mt-2 absolute w-full md:w-3/4 -z-10"></div>
                     <p className="mt-6 font-work tracking-tighter xl:text-lg">
                         We install beautiful residential solar on your home with
                         care so that you can enjoy the benefits of affordable
@@ -33,11 +33,11 @@ function Hero() {
                     <img
                         src={HeroImg}
                         alt="Residential home with solar panels installed"
-                        className="object-cover object-right xl:object-left h-72 flex-1 md:flex-none mt-16 md:mt-0 md:h-96 w-3/4 shadow-xl absolute"
+                        className="object-cover object-right xl:object-left h-72 flex-1 md:flex-none mt-16 md:mt-0 md:h-96 w-3/4 shadow-xl absolute md:static"
                     />
                 </div>
             </section>
-            <div className="background-img-container bg-primary h-96 md:h-screen md:w-1/2 md:absolute -z-20 -bottom-48 md:bottom-auto md:right-0">
+            <div className="background-img-container bg-primary h-96 md:h-screen md:w-1/2 md:absolute -z-20 -bottom-48 md:bottom-auto md:right-0 max-h-max">
                 <img
                     src={HeroImg}
                     alt="Residential home with solar panels installed"

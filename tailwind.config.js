@@ -17,6 +17,9 @@ module.exports = {
                 '-10': '-10',
                 '-20': '-20',
             },
+            maxHeight: {
+                max: '800px',
+            },
         },
     },
     variants: {
