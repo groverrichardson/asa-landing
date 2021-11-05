@@ -18,7 +18,7 @@ function Hero() {
             </header>
             <section className="flex flex-row content-center justify-center flex-wrap md:flex-1">
                 <div className="hero-copy-container w-full md:w-1/2 p-12 md:p-24">
-                    <h1 className="whitespace-pre-wrap text-3xl xl:text-5xl text-primary font-work tracking-tighter font-bold">
+                    <h1 className="whitespace-pre-wrap text-5xl text-primary font-work tracking-tighter font-bold">
                         {heroHeader}
                     </h1>
                     <div className="decorative-line h-2 bg-secondary mt-2 absolute w-3/4 -z-10"></div>
@@ -33,11 +33,11 @@ function Hero() {
                     <img
                         src={HeroImg}
                         alt="Residential home with solar panels installed"
-                        className="object-cover object-right xl:object-left h-72 flex-1 md:flex-none mt-16 md:mt-0 md:h-96 w-3/4 shadow-xl"
+                        className="object-cover object-right xl:object-left h-72 flex-1 md:flex-none mt-16 md:mt-0 md:h-96 w-3/4 shadow-xl absolute"
                     />
                 </div>
             </section>
-            <div className="background-img-container bg-primary h-96 md:h-screen md:w-1/2 absolute -z-20 -bottom-48 md:bottom-auto md:right-0">
+            <div className="background-img-container bg-primary h-96 md:h-screen md:w-1/2 md:absolute -z-20 -bottom-48 md:bottom-auto md:right-0">
                 <img
                     src={HeroImg}
                     alt="Residential home with solar panels installed"
