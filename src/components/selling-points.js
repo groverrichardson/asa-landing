@@ -12,7 +12,7 @@ function SellingPoints() {
                         className="background-image-installer object-cover opacity-20 iPhone-portrait:max-h-96 iPhone-portrait:w-full"
                     />
                 </div>
-                <div className="selling-bullet-points px-10">
+                <div className="selling-bullet-points px-10 pt-5 iPhone-portrait:pt-0">
                     <div className="bullet-point py-10 relative">
                         <h1 className="bullet-header text-4xl font-work font-bold text-primary tracking-tighter">
                             Quality Installations
