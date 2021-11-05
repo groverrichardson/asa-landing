@@ -5,7 +5,7 @@ import HeroImg from '../assets/hero.jpeg';
 
 function Hero() {
     return (
-        <section className="bg-cover flex flex-row flex-wrap h-screen max-h-96">
+        <section className="bg-cover flex flex-row flex-wrap h-screen max-h-96 relative">
             <header className="flex items-center justify-between px-5 py-2 w-full self-start">
                 <img
                     src={Logo}
@@ -15,13 +15,13 @@ function Hero() {
                 <Button visibility="invisible sm:visible" />
             </header>
             <section className="flex flex-row content-center justify-center flex-wrap md:flex-1 md:py-5">
-                <div className="hero-copy-container w-full md:w-1/2 p-12 md:px-12 md:py-0 lg:p-24">
+                <div className="hero-copy-container w-full md:w-1/2 p-12 md:px-12 md:py-0 lg:p-24 relative md:static overflow-x-hidden">
                     <h1 className="whitespace-pre-wrap text-5xl text-primary font-work tracking-tighter font-bold">
                         Quality you can trust,{' '}
                         <span className="text-secondary">solar</span> you can
                         depend on.
                     </h1>
-                    <div className="decorative-line h-2 bg-secondary mt-2 absolute w-full md:w-3/4 -z-10"></div>
+                    <div className="decorative-line h-2 bg-secondary mt-2 absolute w-screen md:w-3/4 -z-10"></div>
                     <p className="mt-6 font-work tracking-tighter xl:text-lg">
                         We install beautiful residential solar on your home with
                         care so that you can enjoy the benefits of affordable
