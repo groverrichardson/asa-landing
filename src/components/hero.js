@@ -14,7 +14,7 @@ function Hero() {
                     alt="American Solar Advantage"
                     className="h-24"
                 />
-                <Button />
+                <Button visibility="invisible sm:visible" />
             </header>
             <section className="flex flex-row content-center justify-center flex-wrap md:flex-1">
                 <div className="hero-copy-container w-full md:w-1/2 p-12 md:p-24">
