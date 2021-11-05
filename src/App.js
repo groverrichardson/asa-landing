@@ -1,11 +1,11 @@
 import React from 'react';
-import Test from './components/test';
 import 'tailwindcss/tailwind.css';
+import Hero from './components/hero';
 
 function App() {
     return (
         <main className="App">
-            <Test />
+            <Hero />
         </main>
     );
 }
