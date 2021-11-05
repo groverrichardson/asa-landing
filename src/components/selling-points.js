@@ -3,13 +3,13 @@ import SolarInstall from '../assets/solar-install.jpeg';
 
 function SellingPoints() {
     return (
-        <section className="SellingPoints flex flex-column flex-wrap justify-center iPhone-portrait:mt-72">
-            <div className="main-selling-container flex flex-row flex-wrap-reverse relative">
-                <div className="background-install-container absolute h-96 -z-10 -bottom-96 bg-secondary">
+        <section className="SellingPoints flex flex-row md:flex-row-reverse flex-wrap justify-center iPhone-portrait:mt-72 iPad-landscape:mt-24 md:flex-nowrap md:px-10 md:items-center md:relative">
+            <div className="main-selling-container flex flex-row flex-wrap-reverse relative md:static md:pt-20">
+                <div className="background-install-container absolute h-96 -z-10 -bottom-96 bg-secondary md:top-0 md:w-full md:left-0 md:bottom-0 md:h-full">
                     <img
                         src={SolarInstall}
                         alt="Solar installers installing solar panels on a residential home"
-                        className="background-image-installer object-cover opacity-20 iPhone-portrait:max-h-96 iPhone-portrait:w-full"
+                        className="background-image-installer object-cover opacity-20 iPhone-portrait:max-h-96 iPhone-portrait:w-full md:w-auto md:max-height-none md:h-full md:object-right"
                     />
                 </div>
                 <div className="selling-bullet-points px-10 pt-5 iPhone-portrait:pt-0">
@@ -56,7 +56,7 @@ function SellingPoints() {
             <img
                 src={SolarInstall}
                 alt="Solar installers installing solar panels on a residential home"
-                className="h-72 w-3/4 border-4 mt-12 border-white p-5 object-cover"
+                className="h-72 w-3/4 border-4 mt-12 border-white p-5 object-cover md:w-1/2 md:h-96"
             />
         </section>
     );

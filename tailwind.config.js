@@ -23,6 +23,7 @@ module.exports = {
             },
             maxHeight: {
                 max: '800px',
+                iPad: '400px',
             },
             height: {
                 decorative1: '8.3rem',
@@ -31,6 +32,7 @@ module.exports = {
                 decorative2iphone: '3.9rem',
                 decorative3: '5.4rem',
                 decorative3iphone: '2.4rem',
+                iPad: '615px',
             },
             inset: {
                 decorative1: '5.9rem',
@@ -41,6 +43,7 @@ module.exports = {
             },
             screens: {
                 'iPhone-portrait': { min: '750px' },
+                'iPad-landscape': { min: '810px' },
             },
         },
     },
