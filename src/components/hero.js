@@ -5,7 +5,7 @@ import HeroImg from '../assets/hero.jpeg';
 
 function Hero() {
     return (
-        <section className="bg-cover flex flex-row flex-wrap h-screen md:max-h-96 relative mb-48 sm:mb-0">
+        <section className="hero-section-container bg-cover flex flex-row flex-wrap h-screen md:max-h-96 relative mobileS:mb-48 iPhone:mb-20">
             <header className="flex items-center justify-between px-5 py-2 w-full self-start">
                 <img
                     src={Logo}
