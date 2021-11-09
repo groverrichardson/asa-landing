@@ -37,7 +37,7 @@ function Hero() {
                     />
                 </div>
             </section>
-            <div className="background-img-container bg-primary h-96 md:h-iPad lg:h-screen md:w-1/2 md:absolute -z-20 -bottom-48 md:bottom-auto md:right-0 max-h-max">
+            <div className="background-img-container bg-gray-800 h-96 md:h-iPad lg:h-screen md:w-1/2 md:absolute -z-20 -bottom-48 md:bottom-auto md:right-0 max-h-max">
                 <img
                     src={HeroImg}
                     alt="Residential home with solar panels installed"
