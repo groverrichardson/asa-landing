@@ -44,6 +44,7 @@ module.exports = {
             screens: {
                 'iPhone-portrait': { min: '750px' },
                 'iPad-landscape': { min: '810px' },
+                xs: { min: '375px' },
             },
         },
     },
