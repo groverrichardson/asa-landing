@@ -3,7 +3,7 @@ import SolarInstall from '../assets/solar-install.jpeg';
 
 function SellingPoints() {
     return (
-        <section className="SellingPoints flex flex-row flex-wrap justify-center md:px-10 md:items-center iPhoneX:mt-12 iPhone12Pro:mt-20 pixel2:mt-32">
+        <section className="SellingPoints flex flex-row flex-wrap justify-center md:px-10 md:items-center">
             <div className="main-selling-container flex flex-row flex-wrap-reverse relative">
                 <div className="background-install-container absolute h-96 -z-10 -bottom-96 bg-secondary md:w-full md:left-0 md:h-full">
                     <img
@@ -13,7 +13,7 @@ function SellingPoints() {
                     />
                 </div>
                 <div className="selling-bullet-points px-10 py-5 iPhone-portrait:pt-0">
-                    <div className="bullet-point py-5 relative mt-10">
+                    <div className="bullet-point py-5 relative">
                         <h1 className="bullet-header text-3xl font-work font-bold text-primary tracking-tighter">
                             Quality Installations
                         </h1>

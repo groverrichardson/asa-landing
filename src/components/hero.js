@@ -5,7 +5,7 @@ import HeroImg from '../assets/hero.jpeg';
 
 function Hero() {
     return (
-        <section className="hero-section-container bg-cover flex flex-row flex-wrap h-screen md:max-h-96 relative mobileS:mb-48 iPhone:mb-20">
+        <section className="hero-section-container bg-cover flex flex-row flex-wrap md:max-h-96 relative mobileS:mb-48 iPhone:mb-20">
             <header className="flex items-center justify-between px-5 py-2 w-full self-start">
                 <img
                     src={Logo}
@@ -29,21 +29,19 @@ function Hero() {
                     </p>
                     <Button margin="mt-10" />
                 </div>
-                <div className="w-full md:w-1/2 object-cover object-left flex flex-column justify-center content-center">
+                <div className="hero-img-container w-full md:w-1/2 object-cover object-left flex flex-column justify-center items-center relative">
                     <img
                         src={HeroImg}
                         alt="Residential home with solar panels installed"
-                        className="object-cover object-right xl:object-left h-72 flex-1 md:flex-none mt-12 md:mt-0 md:h-96 w-3/4 shadow-xl absolute md:static border-4 border-white p-5"
+                        className="object-cover object-right xl:object-left h-72 flex-1 md:flex-none md:mt-0 md:h-96 w-3/4 shadow-xl absolute md:static border-4 border-white p-5"
+                    />
+                    <img
+                        src={HeroImg}
+                        alt="Residential home with solar panels installed"
+                        className="hero-bg-image"
                     />
                 </div>
             </section>
-            <div className="background-img-container bg-gray-800 h-96 md:h-iPad lg:h-screen md:w-1/2 md:absolute -z-20 -bottom-48 md:bottom-auto md:right-0 max-h-max">
-                <img
-                    src={HeroImg}
-                    alt="Residential home with solar panels installed"
-                    className="object-cover object-left h-full opacity-10"
-                />
-            </div>
         </section>
     );
 }
