@@ -1,8 +1,8 @@
 import React from 'react';
+import './styles/index.css';
 import 'tailwindcss/tailwind.css';
 import Hero from './components/hero';
 import SellingPoints from './components/selling-points';
-import './styles/index.css';
 
 function App() {
     return (

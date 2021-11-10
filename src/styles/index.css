@@ -15,5 +15,11 @@ code {
 }
 
 .SellingPoints {
-    margin-top: 0px;
+    margin-top: 23rem;
+}
+
+@media screen and (min-width: 320px) {
+    .SellingPoints {
+        margin-top: 29rem;
+    }
 }
