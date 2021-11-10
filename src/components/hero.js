@@ -21,7 +21,7 @@ function Hero() {
                         <span className="text-tertiary">solar</span> you can
                         depend on.
                     </h1>
-                    <div className="decorative-line h-2 bg-secondary mt-2 absolute w-screen md:w-3/4 -z-10"></div>
+                    <div className="decorative-line h-2 bg-gradient-to-r from-secondary to-tertiary mt-2 absolute w-screen md:w-3/4 -z-10"></div>
                     <p className="hero-copy mt-6 font-work font-semi-bold tracking-tight text-lg text-black xl:text-lg">
                         We install beautiful residential solar on your home with
                         care so that you can enjoy the benefits of affordable
