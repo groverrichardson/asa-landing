@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../assets/asa-logo-2021.svg';
-import Button from './button';
+import Cta from './cta';
 import HeroImg from '../assets/hero.jpeg';
 
 function Hero() {
@@ -12,7 +12,7 @@ function Hero() {
                     alt="American Solar Advantage"
                     className="h-24"
                 />
-                <Button visibility="invisible sm:visible" />
+                <Cta visibility="invisible sm:visible" />
             </header>
             <section className="hero-container flex flex-row py-0 items-center justify-center flex-wrap md:flex-1 md:py-5">
                 <div className="hero-copy-container w-full md:w-1/2 px-12 pt-6 pb-12 md:px-12 md:py-0 lg:p-24 relative md:static overflow-x-hidden">
@@ -27,7 +27,7 @@ function Hero() {
                         care so that you can enjoy the benefits of affordable
                         electricity.
                     </p>
-                    <Button margin="mt-10" />
+                    <Cta margin="mt-10" />
                 </div>
                 <div className="hero-img-container w-full md:w-1/2 object-cover object-left flex flex-column justify-center items-center relative ">
                     <img

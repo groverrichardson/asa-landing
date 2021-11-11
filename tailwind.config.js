@@ -45,7 +45,7 @@ module.exports = {
                 'iPhone-portrait': { min: '750px' },
                 'iPad-landscape': { min: '810px' },
                 galaxyFold: { min: '280px' },
-                iPhone4: { min: '320px' },
+                iPhone: { min: '320px' },
                 iPhoneX: { min: '375px' },
                 iPhone12Pro: { min: '390px' },
                 pixel2: { min: '411px' },

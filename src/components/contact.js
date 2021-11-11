@@ -1,4 +1,4 @@
-import { TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import React from 'react';
 
 function Contact() {
@@ -45,6 +45,16 @@ function Contact() {
                     sx={{ marginTop: '10px', width: '100%' }}
                 />
             </div>
+            <Button
+                className="max-w-xl bg-gradient-to-r from-secondary to-tertiary w-full font-work"
+                variant="contained"
+                sx={{
+                    marginTop: '15px',
+                    textTransform: 'none',
+                    fontSize: '1.5rem',
+                }}>
+                Submit
+            </Button>
         </form>
     );
 }
