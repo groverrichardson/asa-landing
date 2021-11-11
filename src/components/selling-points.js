@@ -3,16 +3,16 @@ import SolarInstall from '../assets/solar-install.jpeg';
 
 function SellingPoints() {
     return (
-        <section className="SellingPoints flex flex-row flex-wrap justify-center">
-            <div className="main-selling-container flex flex-row flex-wrap-reverse relative max-w-2xl">
-                <div className="selling-bullet-points px-10 py-5 iPhone-portrait:pt-0">
-                    <div className="bullet-point py-5 relative">
-                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPad:text-3xl font-work font-bold text-primary tracking-tighter iPad:mt-14">
+        <section className="SellingPoints flex flex-row flex-wrap justify-center iPadPro:flex-nowrap iPadPro:flex-row-reverse">
+            <div className="main-selling-container flex flex-row flex-wrap-reverse relative max-w-2xl iPadPro:shadow-md">
+                <div className="selling-bullet-points px-10 py-5 iPhone-portrait:pt-0 flex flex-col justify-center items-center iPadPro:p-10">
+                    <div className="bullet-point py-5 iPadPro:py-0 relative">
+                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-xl font-work font-bold text-primary tracking-tighter">
                             Quality Installations
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">
                             <div className="bullet-decorative-line border-secondary border-4 h-auto mr-2"></div>
-                            <p className="selling-description font-work tracking-tight">
+                            <p className="selling-description iPadPro:text-sm font-work tracking-tight">
                                 Whether you purchased with us or you’re working
                                 with one of our preferred partners, we pride
                                 ourselves on quality installs. We’ll do our best
@@ -22,13 +22,13 @@ function SellingPoints() {
                             </p>
                         </div>
                     </div>
-                    <div className="bullet-point py-5 relative mt-10">
-                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPad:text-3xl font-work font-bold text-primary tracking-tighter">
+                    <div className="bullet-point py-5 iPadPro:py-0 relative mt-10 iPadPro:mt-1">
+                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-xl font-work font-bold text-primary tracking-tighter">
                             Exceptional Customer Service
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">
                             <div className="bullet-decorative-line border-quaternary border-4 h-auto mr-2"></div>
-                            <p className="selling-description font-work tracking-tight">
+                            <p className="selling-description iPadPro:text-sm font-work tracking-tight">
                                 From start to finish, we keep you in the loop.
                                 Regular updates are provided each step of the
                                 way. But if you need additional information, you
@@ -37,13 +37,13 @@ function SellingPoints() {
                             </p>
                         </div>
                     </div>
-                    <div className="bullet-point py-5 relative mt-10">
-                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPad:text-3xl font-work font-bold text-primary tracking-tighter">
+                    <div className="bullet-point py-5 iPadPro:py-0 relative mt-10 iPadPro:mt-1">
+                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-xl font-work font-bold text-primary tracking-tighter">
                             Need a Battery? No Problem.
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">
                             <div className="bullet-decorative-line border-secondary border-4 h-auto mr-2"></div>
-                            <p className="selling-description font-work tracking-tight">
+                            <p className="selling-description iPadPro:text-sm font-work tracking-tight">
                                 Save some of your extra power for a rainy day.
                                 We don't just provide solar panels. We also sell
                                 and install solar batteries. We're your one-stop
@@ -53,7 +53,7 @@ function SellingPoints() {
                     </div>
                 </div>
             </div>
-            <div className="install-img-container flex flex-row justify-center items-center bg-tertiary">
+            <div className="install-img-container flex flex-row justify-center items-center bg-tertiary max-w-1/2">
                 <img
                     src={SolarInstall}
                     alt="Solar installers installing solar panels on a residential home"

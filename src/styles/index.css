@@ -19,29 +19,11 @@ code {
 }
 
 .hero-section-container {
-    height: 980px;
+    height: 100%;
 }
 
 .hero-img-container {
     height: 385px;
-}
-
-@media screen and (min-width: 280px) and (max-width: 319px) {
-    .hero-section-container {
-        height: 1100px;
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 374px) {
-    .hero-section-container {
-        height: 930px;
-    }
-}
-
-@media screen and (min-width: 390px) {
-    .hero-section-container {
-        height: 900px;
-    }
 }
 
 .hero-bg-image {
@@ -77,29 +59,43 @@ code {
         opacity: 25%;
     }
 
-    .hero-section-container {
-        height: 710px;
-    }
-
     .hero-img-container::before {
         height: 100%;
     }
 }
 
-@media screen and (min-width: '1024px') {
-    .hero-section-container {
-        height: 745px;
+@media screen and (min-width: 1024px) {
+    .hero-img-container::before {
+        height: 129%;
+        top: -29%;
     }
 
     .hero-bg-image {
-        top: -65%;
-        height: 197%;
+        top: -30%;
+        height: 130%;
+    }
+
+    .hero-copy-container {
+        width: 50vw;
+        max-width: 50vw;
+    }
+
+    .hero-img-container {
+        width: 50vw;
+    }
+
+    .install-img-container {
+        max-width: 65.5vw;
+    }
+
+    .selling-bullet-points {
+        max-height: 380px;
     }
 }
 
 .install-img-container {
     position: relative;
-    height: 365px;
+    height: 380px;
 }
 
 .installer-bg-img {
