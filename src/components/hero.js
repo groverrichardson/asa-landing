@@ -5,7 +5,7 @@ import HeroImg from '../assets/hero.jpeg';
 
 function Hero() {
     return (
-        <section className="hero-section-container bg-cover flex flex-row flex-wrap md:max-h-96 relative mobileS:mb-48 iPhone:mb-20">
+        <section className="hero-section-container bg-cover flex flex-row flex-wrap relative mobileS:mb-48 iPhone:mb-20">
             <header className="flex items-center justify-between px-5 py-2 w-full self-start">
                 <img
                     src={Logo}
@@ -14,7 +14,7 @@ function Hero() {
                 />
                 <Button visibility="invisible sm:visible" />
             </header>
-            <section className="hero-container flex flex-row py-0 content-center justify-center flex-wrap md:flex-1 md:py-5">
+            <section className="hero-container flex flex-row py-0 items-center justify-center flex-wrap md:flex-1 md:py-5">
                 <div className="hero-copy-container w-full md:w-1/2 px-12 pt-6 pb-12 md:px-12 md:py-0 lg:p-24 relative md:static overflow-x-hidden">
                     <h1 className="hero-header whitespace-pre-wrap text-4xl lg:text-5xl text-primary font-work tracking-tighter font-bold">
                         Quality you can trust,{' '}

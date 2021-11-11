@@ -4,10 +4,10 @@ import SolarInstall from '../assets/solar-install.jpeg';
 function SellingPoints() {
     return (
         <section className="SellingPoints flex flex-row flex-wrap justify-center md:px-10 md:items-center">
-            <div className="main-selling-container flex flex-row flex-wrap-reverse relative">
+            <div className="main-selling-container flex flex-row flex-wrap-reverse relative max-w-2xl">
                 <div className="selling-bullet-points px-10 py-5 iPhone-portrait:pt-0">
                     <div className="bullet-point py-5 relative">
-                        <h1 className="bullet-header text-3xl font-work font-bold text-primary tracking-tighter">
+                        <h1 className="bullet-header text-3xl font-work font-bold text-primary tracking-tighter iPad:mt-16">
                             Quality Installations
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">
@@ -57,7 +57,7 @@ function SellingPoints() {
                 <img
                     src={SolarInstall}
                     alt="Solar installers installing solar panels on a residential home"
-                    className="h-72 w-3/4 border-4 border-white p-5 object-cover md:w-1/2 md:h-96"
+                    className="h-72 w-3/4 border-4 border-white p-5 object-cover"
                 />
                 <img
                     src={SolarInstall}
