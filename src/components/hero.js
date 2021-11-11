@@ -14,15 +14,17 @@ function Hero() {
                 />
                 <Cta visibility="invisible laptop:visible" />
             </header>
-            <section className="hero-container flex flex-row py-0 items-center justify-center flex-wrap ">
-                <div className="hero-copy-container w-full px-12 pt-6 pb-12 lg:p-24 relative overflow-x-hidden">
-                    <h1 className="hero-header whitespace-pre-wrap text-4xl iPhoneX:text-5xl iPad:text-4xl text-primary font-work tracking-tighter font-bold">
-                        Quality you can trust,{' '}
-                        <span className="text-tertiary">solar</span> you can
-                        depend on.
-                    </h1>
-                    <div className="decorative-line h-2 bg-gradient-to-r from-secondary to-tertiary mt-2 absolute w-screen  -z-10"></div>
-                    <p className="hero-copy mt-6 font-work font-semi-bold tracking-tight text-lg text-black xl:text-lg">
+            <section className="hero-container flex flex-row py-0 items-center justify-center flex-wrap iPad:flex-1">
+                <div className="hero-copy-container w-full px-12 pt-6 pb-12 lg:p-24 relative overflow-x-hidden flex flex-col justify-center items-center">
+                    <div className="hero-header container max-w-xl">
+                        <h1 className="hero-header whitespace-pre-wrap text-4xl iPhoneX:text-5xl iPad:text-4xl text-primary font-work tracking-tighter font-bold ">
+                            Quality you can trust,{' '}
+                            <span className="text-tertiary">solar</span> you can
+                            depend on.
+                        </h1>
+                        <div className="decorative-line h-2 bg-gradient-to-r from-secondary to-tertiary mt-2 absolute w-screen -z-10"></div>
+                    </div>
+                    <p className="hero-copy mt-6 font-work font-semi-bold tracking-tight text-lg text-black xl:text-lg max-w-xl">
                         We install beautiful residential solar on your home with
                         care so that you can enjoy the benefits of affordable
                         electricity.
