@@ -6,10 +6,10 @@ function Contact() {
         <form className="Contact p-10 w-full overflow-x-hidden relative flex flex-col justify-center items-center">
             <div className="form-content-container max-w-xl flex flex-col justify-center items-center">
                 <div className="header-container">
-                    <header className="form-header text-3xl iPhoneX:text-4xl font-work font-bold text-primary tracking-tighter">
+                    <header className="form-header text-3xl iPhoneX:text-4xl iPad:text-3xl font-work font-bold text-primary tracking-tighter">
                         Get a Free Quote
                     </header>
-                    <div className="decorative-line h-2 bg-gradient-to-r from-secondary to-tertiary mt-2 absolute self-start w-full md:w-3/4 -z-10"></div>
+                    <div className="decorative-line h-2 bg-gradient-to-r from-secondary to-tertiary mt-2 absolute self-start w-full -z-10"></div>
                     <p className="contact-copy py-5 ont-work font-semi-bold tracking-tight text-lg text-black xl:text-lg">
                         Etiam porta sem malesuada magna mollis euismod. Praesent
                         commodo cursus magna, vel scelerisque nisl consectetur
@@ -20,6 +20,7 @@ function Contact() {
                     id="outlined-basic"
                     label="Name"
                     variant="outlined"
+                    required
                     className="name-input"
                     sx={{ width: '100%' }}
                 />
@@ -28,6 +29,7 @@ function Contact() {
                     label="Email"
                     variant="outlined"
                     className="email-input"
+                    required
                     sx={{ marginTop: '10px', width: '100%' }}
                 />
                 <TextField
@@ -35,6 +37,7 @@ function Contact() {
                     label="Phone"
                     variant="outlined"
                     className="phone-input"
+                    required
                     sx={{ marginTop: '10px', width: '100%' }}
                 />
                 <TextField
@@ -45,7 +48,7 @@ function Contact() {
                     sx={{ marginTop: '10px', width: '100%' }}
                 />
             </div>
-            <button className="bg-gradient-to-r from-secondary to-tertiary md:w-auto p-3 text-center text-lg iPhone:text-2xl font-bold text-white font-work shadow-md rounded mt-4 w-full iPad:w-full max-w-xl">
+            <button className="bg-gradient-to-r from-secondary to-tertiary md:w-auto p-3 text-center text-lg iPhone:text-2xl iPad:text-xl font-bold text-white font-work shadow-md rounded mt-4 w-full iPad:w-full max-w-xl">
                 Submit
             </button>
         </form>
