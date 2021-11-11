@@ -49,6 +49,8 @@ module.exports = {
                 iPhoneX: { min: '375px' },
                 iPhone12Pro: { min: '390px' },
                 pixel2: { min: '411px' },
+                iPad: { min: '768px' },
+                iPadPro: { min: '1024px' },
                 laptop: { min: '1024px' },
                 laptopL: { min: '1440px' },
                 ivK: { min: '2440px' },
