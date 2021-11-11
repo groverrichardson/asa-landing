@@ -83,3 +83,18 @@ code {
         opacity: 25%;
     }
 }
+
+.install-img-container {
+    position: relative;
+    height: 365px;
+}
+
+.installer-bg-img {
+    content: '';
+    position: absolute;
+    object-fit: cover;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    opacity: 20%;
+}

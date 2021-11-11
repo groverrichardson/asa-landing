@@ -29,7 +29,7 @@ function Hero() {
                     </p>
                     <Button margin="mt-10" />
                 </div>
-                <div className="hero-img-container w-full md:w-1/2 object-cover object-left flex flex-column justify-center items-center relative">
+                <div className="hero-img-container w-full md:w-1/2 object-cover object-left flex flex-column justify-center items-center relative ">
                     <img
                         src={HeroImg}
                         alt="Residential home with solar panels installed"

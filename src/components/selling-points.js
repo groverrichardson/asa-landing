@@ -5,13 +5,6 @@ function SellingPoints() {
     return (
         <section className="SellingPoints flex flex-row flex-wrap justify-center md:px-10 md:items-center">
             <div className="main-selling-container flex flex-row flex-wrap-reverse relative">
-                <div className="background-install-container absolute h-96 -z-10 -bottom-96 bg-secondary md:w-full md:left-0 md:h-full">
-                    <img
-                        src={SolarInstall}
-                        alt="Solar installers installing solar panels on a residential home"
-                        className="background-image-installer object-cover opacity-20 h-full iPhone-portrait:max-h-96 iPhone-portrait:w-full md:w-auto md:max-height-none md:h-full md:object-right"
-                    />
-                </div>
                 <div className="selling-bullet-points px-10 py-5 iPhone-portrait:pt-0">
                     <div className="bullet-point py-5 relative">
                         <h1 className="bullet-header text-3xl font-work font-bold text-primary tracking-tighter">
@@ -60,11 +53,18 @@ function SellingPoints() {
                     </div>
                 </div>
             </div>
-            <img
-                src={SolarInstall}
-                alt="Solar installers installing solar panels on a residential home"
-                className="h-72 w-3/4 border-4 mt-12 border-white p-5 object-cover md:w-1/2 md:h-96"
-            />
+            <div className="install-img-container flex flex-row justify-center items-center bg-tertiary">
+                <img
+                    src={SolarInstall}
+                    alt="Solar installers installing solar panels on a residential home"
+                    className="h-72 w-3/4 border-4 border-white p-5 object-cover md:w-1/2 md:h-96"
+                />
+                <img
+                    src={SolarInstall}
+                    alt="Solar installers installing solar panels on a residential home"
+                    className="installer-bg-img"
+                />
+            </div>
         </section>
     );
 }
