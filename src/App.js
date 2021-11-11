@@ -11,6 +11,9 @@ function App() {
             <Hero />
             <SellingPoints />
             <Contact />
+            <footer className="flex flex-row w-screen h-20 bg-blueGrey text-white font-work justify-center items-center text-center p-5">
+                American Solar Advantage © 2021 All rights reserved
+            </footer>
         </main>
     );
 }
