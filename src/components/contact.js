@@ -45,16 +45,9 @@ function Contact() {
                     sx={{ marginTop: '10px', width: '100%' }}
                 />
             </div>
-            <Button
-                className="max-w-xl bg-gradient-to-r from-secondary to-tertiary w-full font-work"
-                variant="contained"
-                sx={{
-                    marginTop: '15px',
-                    textTransform: 'none',
-                    fontSize: '1.5rem',
-                }}>
+            <button className="bg-gradient-to-r from-secondary to-tertiary md:w-auto p-3 text-center text-lg iPhone:text-2xl font-bold text-white font-work shadow-md rounded mt-4 w-full iPad:w-full max-w-xl">
                 Submit
-            </Button>
+            </button>
         </form>
     );
 }
