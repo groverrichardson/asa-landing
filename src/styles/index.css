@@ -52,7 +52,7 @@ code {
     content: '';
     background-color: #2f4858;
     background-size: 100%;
-    height: 111%;
+    height: 100%;
     width: 100%;
     top: 0%;
     position: absolute;
@@ -85,6 +85,10 @@ code {
 
     .hero-section-container {
         height: 537px;
+    }
+
+    .hero-img-container::before {
+        height: 111%;
     }
 }
 
