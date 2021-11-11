@@ -19,7 +19,7 @@ code {
 }
 
 .hero-section-container {
-    height: 1045px;
+    height: 980px;
 }
 
 .hero-img-container {
@@ -34,13 +34,13 @@ code {
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
     .hero-section-container {
-        height: 1000px;
+        height: 930px;
     }
 }
 
 @media screen and (min-width: 390px) {
     .hero-section-container {
-        height: 980px;
+        height: 900px;
     }
 }
 
