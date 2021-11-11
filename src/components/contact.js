@@ -11,9 +11,8 @@ function Contact() {
                     </header>
                     <div className="decorative-line h-2 bg-gradient-to-r from-secondary to-tertiary mt-2 absolute self-start w-full -z-10"></div>
                     <p className="contact-copy py-5 ont-work font-semi-bold tracking-tight text-lg text-black xl:text-lg">
-                        Etiam porta sem malesuada magna mollis euismod. Praesent
-                        commodo cursus magna, vel scelerisque nisl consectetur
-                        et.
+                        Please fill out the form below and one of our ASA
+                        representatives will contact you shortly.
                     </p>
                 </div>
                 <TextField
