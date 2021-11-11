@@ -7,7 +7,7 @@ function SellingPoints() {
             <div className="main-selling-container flex flex-row flex-wrap-reverse relative max-w-2xl">
                 <div className="selling-bullet-points px-10 py-5 iPhone-portrait:pt-0">
                     <div className="bullet-point py-5 relative">
-                        <h1 className="bullet-header text-3xl font-work font-bold text-primary tracking-tighter iPad:mt-16">
+                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl font-work font-bold text-primary tracking-tighter iPad:mt-16">
                             Quality Installations
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">
@@ -23,7 +23,7 @@ function SellingPoints() {
                         </div>
                     </div>
                     <div className="bullet-point py-5 relative mt-10">
-                        <h1 className="bullet-header text-3xl font-work font-bold text-primary tracking-tighter">
+                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl font-work font-bold text-primary tracking-tighter">
                             Exceptional Customer Service
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">
@@ -38,7 +38,7 @@ function SellingPoints() {
                         </div>
                     </div>
                     <div className="bullet-point py-5 relative mt-10">
-                        <h1 className="bullet-header text-3xl font-work font-bold text-primary tracking-tighter">
+                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl font-work font-bold text-primary tracking-tighter">
                             Need a Battery? No Problem.
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">
