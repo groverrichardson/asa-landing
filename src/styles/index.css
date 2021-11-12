@@ -14,8 +14,14 @@ code {
         monospace;
 }
 
+.hero-img,
+.installer-img {
+    max-width: 500px;
+}
+
 .hero-container {
     position: relative;
+    max-width: 1920px;
 }
 
 .hero-section-container {
@@ -77,7 +83,7 @@ code {
 
     .hero-copy-container {
         width: 50vw;
-        max-width: 50vw;
+        max-width: 50%;
     }
 
     .hero-img-container {
@@ -90,12 +96,28 @@ code {
 
     .selling-bullet-points {
         max-height: 380px;
+        width: 50vw;
     }
 }
 
 @media screen and (min-width: 1280px) {
     .install-img-container {
         max-width: 52.5vw;
+    }
+
+    .SellingPoints {
+        max-width: 1920px;
+    }
+}
+
+@media screen and (min-width: 1334px) {
+    .hero-copy-container {
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+    }
+
+    .selling-bullet-points {
+        padding-right: 20%;
     }
 }
 

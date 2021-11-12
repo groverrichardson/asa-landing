@@ -7,7 +7,7 @@ import Contact from './components/contact';
 
 function App() {
     return (
-        <main className="App flex flex-row flex-wrap">
+        <main className="App flex flex-row flex-wrap justify-center items-center">
             <Hero />
             <SellingPoints />
             <Contact />

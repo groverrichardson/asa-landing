@@ -5,7 +5,7 @@ import HeroImg from '../assets/hero.jpeg';
 
 function Hero() {
     return (
-        <section className="hero-section-container bg-cover flex flex-row flex-wrap relative mobileS:mb-48 iPadPro:mb-0 w-full iPadPro:overflow-hidden">
+        <section className="hero-section-container bg-cover flex flex-row flex-wrap relative mobileS:mb-48 iPadPro:mb-0 w-full iPadPro:overflow-hidden justify-center items-center">
             <header className="flex items-center justify-between px-5 py-2 w-full self-start">
                 <img
                     src={Logo}
@@ -15,7 +15,7 @@ function Hero() {
                 <Cta visibility="invisible laptop:visible" />
             </header>
             <section className="hero-container flex flex-row py-0 items-center justify-center flex-wrap iPad:flex-1 iPadPro:flex-nowrap iPadPro:h-96">
-                <div className="hero-copy-container w-full px-12 pt-6 pb-12 relative overflow-x-hidden flex flex-col justify-center items-center iPadPro:px-0 iPadPro:px-12 iPadPro:static">
+                <div className="hero-copy-container w-full px-12 pt-6 pb-12 relative overflow-x-hidden flex flex-col justify-center items-center iPadPro:px-12 laptopM:px-20 laptopHD:px-48 iPadPro:static">
                     <div className="hero-header container max-w-xl">
                         <h1 className="hero-header whitespace-pre-wrap text-4xl iPhoneX:text-5xl iPad:text-4xl text-primary font-work tracking-tighter font-bold ">
                             Quality you can trust,{' '}
@@ -35,7 +35,7 @@ function Hero() {
                     <img
                         src={HeroImg}
                         alt="Residential home with solar panels installed"
-                        className="object-cover object-right xl:object-left h-72 flex-1 w-3/4 shadow-xl absolute border-4 border-white p-5 z-40"
+                        className="hero-img object-cover object-right xl:object-left h-72 flex-1 w-3/4 shadow-xl absolute border-4 border-white p-5 z-40"
                     />
                     <img
                         src={HeroImg}

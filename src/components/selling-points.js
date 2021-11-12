@@ -3,9 +3,9 @@ import SolarInstall from '../assets/solar-install.jpeg';
 
 function SellingPoints() {
     return (
-        <section className="SellingPoints flex flex-row flex-wrap justify-center iPadPro:flex-nowrap iPadPro:flex-row-reverse">
-            <div className="main-selling-container flex flex-row flex-wrap-reverse relative max-w-2xl iPadPro:shadow-md">
-                <div className="selling-bullet-points px-10 py-5 iPhone-portrait:pt-0 flex flex-col justify-center items-center iPadPro:p-10">
+        <section className="SellingPoints flex flex-row flex-wrap justify-center iPadPro:flex-nowrap iPadPro:flex-row-reverse iPad:w-full iPadPro:shadow-md">
+            <div className="main-selling-container flex flex-row flex-wrap-reverse justify-center items-center relative iPadPro:w-1/2">
+                <div className="selling-bullet-points px-10 py-5 flex flex-col justify-center items-center iPad:px-24 iPadPro:p-10">
                     <div className="bullet-point py-5 iPadPro:py-0 relative">
                         <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-xl font-work font-bold text-primary tracking-tighter">
                             Quality Installations
@@ -53,11 +53,11 @@ function SellingPoints() {
                     </div>
                 </div>
             </div>
-            <div className="install-img-container flex flex-row justify-center items-center bg-tertiary max-w-1/2">
+            <div className="install-img-container flex flex-row justify-center items-center bg-tertiary max-w-1/2 w-full">
                 <img
                     src={SolarInstall}
                     alt="Solar installers installing solar panels on a residential home"
-                    className="h-72 w-3/4 border-4 border-white p-5 object-cover"
+                    className="h-72 w-3/4 border-4 border-white p-5 object-cover installer-img"
                 />
                 <img
                     src={SolarInstall}
