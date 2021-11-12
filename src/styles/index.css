@@ -93,6 +93,12 @@ code {
     }
 }
 
+@media screen and (min-width: 1280px) {
+    .install-img-container {
+        max-width: 52.5vw;
+    }
+}
+
 .install-img-container {
     position: relative;
     height: 380px;

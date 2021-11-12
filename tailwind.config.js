@@ -51,7 +51,7 @@ module.exports = {
                 pixel2: { min: '411px' },
                 iPad: { min: '768px' },
                 iPadPro: { min: '1024px' },
-                laptop: { min: '1024px' },
+                laptop: { min: '1280px' },
                 laptopL: { min: '1440px' },
                 ivK: { min: '2440px' },
             },

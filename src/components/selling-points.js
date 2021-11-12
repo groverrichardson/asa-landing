@@ -22,7 +22,7 @@ function SellingPoints() {
                             </p>
                         </div>
                     </div>
-                    <div className="bullet-point py-5 iPadPro:py-0 relative mt-10 iPadPro:mt-1">
+                    <div className="bullet-point laptop:mt-5 py-5 iPadPro:py-0 relative mt-10 iPadPro:mt-1">
                         <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-xl font-work font-bold text-primary tracking-tighter">
                             Exceptional Customer Service
                         </h1>
@@ -37,7 +37,7 @@ function SellingPoints() {
                             </p>
                         </div>
                     </div>
-                    <div className="bullet-point py-5 iPadPro:py-0 relative mt-10 iPadPro:mt-1">
+                    <div className="bullet-point laptop:mt-5 py-5 iPadPro:py-0 relative mt-10 iPadPro:mt-1">
                         <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-xl font-work font-bold text-primary tracking-tighter">
                             Need a Battery? No Problem.
                         </h1>
