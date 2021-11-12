@@ -7,7 +7,7 @@ function SellingPoints() {
             <div className="main-selling-container flex flex-row flex-wrap-reverse justify-center items-center relative iPadPro:w-1/2">
                 <div className="selling-bullet-points px-10 py-5 flex flex-col justify-center items-center iPad:px-24 iPadPro:p-10">
                     <div className="bullet-point py-5 iPadPro:py-0 relative">
-                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-xl font-work font-bold text-primary tracking-tighter">
+                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-3xl font-work font-bold text-primary tracking-tighter">
                             Quality Installations
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">
@@ -23,7 +23,7 @@ function SellingPoints() {
                         </div>
                     </div>
                     <div className="bullet-point laptop:mt-5 py-5 iPadPro:py-0 relative mt-10 iPadPro:mt-1">
-                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-xl font-work font-bold text-primary tracking-tighter">
+                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-3xl font-work font-bold text-primary tracking-tighter">
                             Exceptional Customer Service
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">
@@ -38,7 +38,7 @@ function SellingPoints() {
                         </div>
                     </div>
                     <div className="bullet-point laptop:mt-5 py-5 iPadPro:py-0 relative mt-10 iPadPro:mt-1">
-                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-xl font-work font-bold text-primary tracking-tighter">
+                        <h1 className="bullet-header text-3xl iPhoneX:text-4xl iPadPro:text-3xl font-work font-bold text-primary tracking-tighter">
                             Need a Battery? No Problem.
                         </h1>
                         <div className="bullet-copy-container flex flex-row pt-2">

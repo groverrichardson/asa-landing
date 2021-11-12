@@ -17,7 +17,7 @@ function Hero() {
             <section className="hero-container flex flex-row py-0 items-center justify-center flex-wrap iPad:flex-1 iPadPro:flex-nowrap iPadPro:h-96">
                 <div className="hero-copy-container w-full px-12 pt-6 pb-12 relative overflow-x-hidden flex flex-col justify-center items-center iPadPro:px-12 laptopM:px-20 laptopHD:px-48 iPadPro:static">
                     <div className="hero-header container max-w-xl">
-                        <h1 className="hero-header whitespace-pre-wrap text-4xl iPhoneX:text-5xl iPad:text-4xl text-primary font-work tracking-tighter font-bold ">
+                        <h1 className="hero-header whitespace-pre-wrap text-4xl iPhoneX:text-5xl iPad:text-4xl laptopM:text-5xl text-primary font-work tracking-tighter font-bold ">
                             Quality you can trust,{' '}
                             <span className="text-tertiary">solar</span> you can
                             depend on.
