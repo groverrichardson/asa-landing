@@ -35,7 +35,7 @@ function Hero() {
                     <img
                         src={HeroImg}
                         alt="Residential home with solar panels installed"
-                        className="hero-img object-cover object-right xl:object-left h-72 flex-1 w-3/4 shadow-xl absolute border-4 border-white p-5 z-40"
+                        className="hero-img object-cover object-right xl:object-left h-72 flex-1 w-3/4 shadow-xl absolute border-4 border-white p-5 z-40 iPadPro:self-start"
                     />
                     <img
                         src={HeroImg}
