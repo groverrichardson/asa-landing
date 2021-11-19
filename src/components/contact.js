@@ -1,9 +1,4 @@
-import {
-    Autocomplete,
-    Button,
-    filledInputClasses,
-    TextField,
-} from '@mui/material';
+import { Autocomplete, TextField } from '@mui/material';
 import MuiPhoneNumber from 'material-ui-phone-number';
 import React, { useState } from 'react';
 
@@ -13,45 +8,38 @@ function Contact() {
     const [email, setEmail] = useState('');
     const [emailError, setEmailError] = useState(false);
     const [phone, setPhone] = useState('');
-    const [phoneError, setPhoneError] = useState(false);
     const [address, setAddress] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
-    const [error, setError] = useState(false);
     const [displaySuccess, setDisplaySuccess] = useState(false);
 
-    function formValidation() {
-        setNameError(false);
-        setEmailError(false);
-        setPhoneError(false);
-        setError(false);
-
-        if (!name) {
-            setNameError(true);
+    function formatPhone(phoneNumber) {
+        let formattedNumber = [];
+        let validNumbers = new Set([
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '0',
+        ]);
+        for (let char of phoneNumber) {
+            if (validNumbers.has(char)) {
+                formattedNumber.push(char);
+            }
         }
-        if (!email) {
-            setEmailError(true);
-        }
-        if (!phone || phone.length !== 17) {
-            setPhoneError(true);
-        }
-
-        if (nameError === true || emailError === true || phoneError === true) {
-            setError(true);
-            console.log('this ran');
-            return false;
-        } else {
-            setError(false);
-            return true;
-        }
+        return formattedNumber.join('');
     }
 
     function handleSubmit(e) {
-        setError(false);
         e.preventDefault();
-        formValidation();
+        let phoneNumber = formatPhone(phone);
 
-        if (!error && phone.length === 17) {
+        if (phoneNumber.length === 10) {
             setDisplaySuccess(true);
         }
     }
@@ -118,8 +106,6 @@ function Contact() {
         <form
             className="Contact p-10 w-full overflow-x-hidden relative flex flex-col justify-center items-center"
             onSubmit={(e) => {
-                setError(false);
-                console.log(error);
                 handleSubmit(e);
             }}>
             <div className="form-content-container max-w-xl flex flex-col justify-center items-center">
@@ -132,15 +118,8 @@ function Contact() {
                         Please fill out the form below and one of our ASA
                         representatives will contact you shortly.
                     </p>
-                    {error === true && displaySuccess === false ? (
-                        <p className="error-message mb-3 font-work text-red-700">
-                            Please fill out all required fields.
-                        </p>
-                    ) : (
-                        ''
-                    )}
                     {displaySuccess === true ? (
-                        <p className="error-message mb-3 font-work text-primary font-bold text-2xl tracking-tight py-5">
+                        <p className="success-message mb-3 font-work text-primary font-bold text-2xl tracking-tight py-5">
                             We have received your request. Someone will be in
                             contact with you shortly.
                         </p>
@@ -178,27 +157,17 @@ function Contact() {
                             }}
                             error={emailError}
                         />
-                        <MuiPhoneNumber
-                            defaultCountry={'us'}
-                            sx={{
-                                border: '1px lightgray solid',
-                                width: '100%',
-                                padding: '17px 14px 17px 14px',
-                                marginTop: '10px',
-                                borderRadius: '5px',
-                            }}
+                        <TextField
+                            required
+                            id="outlined-phone"
+                            label="Phone"
+                            variant="outlined"
+                            className="phone-input"
+                            sx={{ marginTop: '10px', width: '100%' }}
                             onChange={(e) => {
-                                setPhoneError(false);
-                                setPhone(e);
+                                setPhone(e.target.value);
                             }}
                         />
-                        {phoneError ? (
-                            <p className="phone-error text-red-700 font-work text-md pb-2 pt-3">
-                                Please enter a valid phone number.
-                            </p>
-                        ) : (
-                            ''
-                        )}
                         <div className="address-fields w-full">
                             <TextField
                                 id="outlined-basic"
