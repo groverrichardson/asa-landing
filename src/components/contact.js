@@ -56,7 +56,7 @@ function Contact() {
         };
 
         fetch(
-            'http://asa-proposal-staging.72bitcreative.com/api/v1/proposals?sendEmail=leadSubmission',
+            'https://asa-proposal-staging.72bitcreative.com/api/v1/proposals?sendEmail=leadSubmission',
             requestOptions
         )
             .then((response) => response.text())
