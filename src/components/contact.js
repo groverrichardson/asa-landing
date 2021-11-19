@@ -14,6 +14,8 @@ function Contact() {
     const [address, setAddress] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
+    const [postalCode, setPostalCode] = useState('');
+    const [postalError, setPostalError] = useState(false);
     const [displaySuccess, setDisplaySuccess] = useState(false);
 
     function handleSubmit(e) {
@@ -23,10 +25,44 @@ function Contact() {
             setEmailError(true);
         } else if (!phone(phone_number).isValid) {
             setPhoneError(true);
+        } else if (!validator.isPostalCode(postalCode, 'any')) {
+            setPostalError(true);
         } else {
             formatPhone();
-            setDisplaySuccess(true);
+            sendToProposalTool();
         }
+    }
+
+    function sendToProposalTool() {
+        const myHeaders = new Headers();
+        myHeaders.append('Content-Type', 'application/json');
+
+        const raw = JSON.stringify({
+            name: name,
+            email: email,
+            phone: phone_number,
+            notes: '',
+            address: address,
+            city: city,
+            state: state,
+            postalCode: postalCode,
+        });
+
+        const requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow',
+        };
+
+        fetch(
+            'http://asa-proposal-staging.72bitcreative.com/api/v1/proposals?sendEmail=leadSubmission',
+            requestOptions
+        )
+            .then((response) => response.text())
+            .then((result) => console.log(result))
+            .then(() => setDisplaySuccess(true))
+            .catch((error) => console.log('error', error));
     }
 
     function formatPhone() {
@@ -193,7 +229,7 @@ function Contact() {
                                 }}
                             />
                             <TextField
-                                id="outlined-basic"
+                                id="outlined-city"
                                 label="City"
                                 variant="outlined"
                                 className="address-input"
@@ -214,6 +250,26 @@ function Contact() {
                                     setState(newValue);
                                 }}
                             />
+                            <TextField
+                                required
+                                id="outlined-postal"
+                                label="Postal Code"
+                                variant="outlined"
+                                className="address-input"
+                                sx={{ marginTop: '10px', width: '100%' }}
+                                error={postalError}
+                                onChange={(e) => {
+                                    setPostalError(false);
+                                    setPostalCode(e.target.value);
+                                }}
+                            />
+                            {postalError ? (
+                                <p className="postal-error-message font-work text-red-700 mt-2">
+                                    Please enter a valid postal code.
+                                </p>
+                            ) : (
+                                ''
+                            )}
                         </div>
                     </div>
                 )}
