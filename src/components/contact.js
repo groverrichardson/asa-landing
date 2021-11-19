@@ -1,47 +1,43 @@
 import { Autocomplete, TextField } from '@mui/material';
 import MuiPhoneNumber from 'material-ui-phone-number';
 import React, { useState } from 'react';
+import { phone } from 'phone';
+import validator from 'validator';
 
 function Contact() {
     const [name, setName] = useState('');
     const [nameError, setNameError] = useState(false);
     const [email, setEmail] = useState('');
     const [emailError, setEmailError] = useState(false);
-    const [phone, setPhone] = useState('');
+    const [phone_number, setPhone] = useState('');
+    const [phoneError, setPhoneError] = useState(false);
     const [address, setAddress] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
     const [displaySuccess, setDisplaySuccess] = useState(false);
 
-    function formatPhone(phoneNumber) {
-        let formattedNumber = [];
-        let validNumbers = new Set([
-            '1',
-            '2',
-            '3',
-            '4',
-            '5',
-            '6',
-            '7',
-            '8',
-            '9',
-            '0',
-        ]);
-        for (let char of phoneNumber) {
-            if (validNumbers.has(char)) {
-                formattedNumber.push(char);
-            }
-        }
-        return formattedNumber.join('');
-    }
-
     function handleSubmit(e) {
         e.preventDefault();
-        let phoneNumber = formatPhone(phone);
 
-        if (phoneNumber.length === 10) {
+        if (!validator.isEmail(email)) {
+            setEmailError(true);
+        } else if (!phone(phone_number).isValid) {
+            setPhoneError(true);
+        } else {
+            formatPhone();
             setDisplaySuccess(true);
         }
+    }
+
+    function formatPhone() {
+        let validNumber = phone(phone_number).phoneNumber;
+        let formattedNumber =
+            validNumber.slice(2, 5) +
+            '-' +
+            validNumber.slice(5, 8) +
+            '-' +
+            validNumber.slice(8);
+        setPhone(formattedNumber);
     }
 
     let states = [
@@ -130,7 +126,7 @@ function Contact() {
                 {displaySuccess === true ? (
                     ''
                 ) : (
-                    <div className="fields">
+                    <div className=" w-full">
                         <TextField
                             id="outlined-name"
                             label="Name"
@@ -153,10 +149,18 @@ function Contact() {
                             sx={{ marginTop: '10px', width: '100%' }}
                             onChange={(e) => {
                                 setEmailError(false);
+                                setEmailError(false);
                                 setEmail(e.target.value);
                             }}
                             error={emailError}
                         />
+                        {emailError ? (
+                            <p className="phone-error-message font-work text-red-700 mt-2">
+                                Please enter a valid email address.
+                            </p>
+                        ) : (
+                            ''
+                        )}
                         <TextField
                             required
                             id="outlined-phone"
@@ -164,10 +168,19 @@ function Contact() {
                             variant="outlined"
                             className="phone-input"
                             sx={{ marginTop: '10px', width: '100%' }}
+                            error={phoneError}
                             onChange={(e) => {
+                                setPhoneError(false);
                                 setPhone(e.target.value);
                             }}
                         />
+                        {phoneError ? (
+                            <p className="phone-error-message font-work text-red-700 mt-2">
+                                Please enter a valid phone number.
+                            </p>
+                        ) : (
+                            ''
+                        )}
                         <div className="address-fields w-full">
                             <TextField
                                 id="outlined-basic"
