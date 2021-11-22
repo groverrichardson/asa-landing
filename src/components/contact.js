@@ -141,7 +141,10 @@ function Contact() {
                 handleSubmit(e);
             }}>
             <div className="form-content-container max-w-xl flex flex-col justify-center items-center">
-                <a href="contact" id="contact">
+                <a
+                    href="contact"
+                    id="contact"
+                    className="focus:border-opacity-0">
                     <div className="header-container">
                         <header className="form-header text-3xl iPhoneX:text-4xl iPad:text-3xl font-work font-bold text-primary tracking-tighter laptopM:text-5xl">
                             Get a Free Quote
