@@ -16,9 +16,8 @@ function SellingPoints() {
                                 Whether you purchased with us or you’re working
                                 with one of our preferred partners, we pride
                                 ourselves on quality installs. We’ll do our best
-                                to maintain provide you with securely installed
-                                equipment while maintaining the quality of your
-                                roof.
+                                to provide you with securely installed equipment
+                                while maintaining the quality of your roof.
                             </p>
                         </div>
                     </div>
