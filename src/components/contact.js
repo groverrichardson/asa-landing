@@ -144,7 +144,7 @@ function Contact() {
                 <a
                     href="contact"
                     id="contact"
-                    className="focus:border-opacity-0">
+                    className="focus:border-transparent">
                     <div className="header-container">
                         <header className="form-header text-3xl iPhoneX:text-4xl iPad:text-3xl font-work font-bold text-primary tracking-tighter laptopM:text-5xl">
                             Get a Free Quote
