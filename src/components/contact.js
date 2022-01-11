@@ -1,4 +1,4 @@
-import { Autocomplete, TextField } from '@mui/material';
+import { Autocomplete, TextField, FormControl } from '@mui/material';
 import MuiPhoneNumber from 'material-ui-phone-number';
 import React, { useState } from 'react';
 import { phone } from 'phone';
@@ -162,116 +162,118 @@ function Contact() {
                 {displaySuccess === true ? (
                     ''
                 ) : (
-                    <div className=" w-full">
-                        <TextField
-                            id="outlined-name"
-                            label="Name"
-                            variant="outlined"
-                            required
-                            className="name-input"
-                            sx={{ width: '100%' }}
-                            onChange={(e) => {
-                                setNameError(false);
-                                setName(e.target.value);
-                            }}
-                            error={nameError}
-                        />
-                        <TextField
-                            id="outlined-email"
-                            label="Email"
-                            variant="outlined"
-                            className="email-input"
-                            required
-                            sx={{ marginTop: '10px', width: '100%' }}
-                            onChange={(e) => {
-                                setEmailError(false);
-                                setEmailError(false);
-                                setEmail(e.target.value);
-                            }}
-                            error={emailError}
-                        />
-                        {emailError ? (
-                            <p className="phone-error-message font-work text-red-700 mt-2">
-                                Please enter a valid email address.
-                            </p>
-                        ) : (
-                            ''
-                        )}
-                        <TextField
-                            required
-                            id="outlined-phone"
-                            label="Phone"
-                            variant="outlined"
-                            className="phone-input"
-                            sx={{ marginTop: '10px', width: '100%' }}
-                            error={phoneError}
-                            onChange={(e) => {
-                                setPhoneError(false);
-                                setPhone(e.target.value);
-                            }}
-                        />
-                        {phoneError ? (
-                            <p className="phone-error-message font-work text-red-700 mt-2">
-                                Please enter a valid phone number.
-                            </p>
-                        ) : (
-                            ''
-                        )}
-                        <div className="address-fields w-full">
+                    <FormControl>
+                        <div className=" w-full">
                             <TextField
-                                id="outlined-basic"
-                                label="Address"
+                                id="outlined-name"
+                                label="Name"
                                 variant="outlined"
-                                className="address-input"
-                                sx={{ marginTop: '10px', width: '100%' }}
-                                onChange={(e) => {
-                                    setAddress(e.target.value);
-                                }}
-                            />
-                            <TextField
-                                id="outlined-city"
-                                label="City"
-                                variant="outlined"
-                                className="address-input"
-                                sx={{ marginTop: '10px', width: '100%' }}
-                                onChange={(e) => {
-                                    setCity(e.target.value);
-                                }}
-                            />
-                            <Autocomplete
-                                disablePortal
-                                id="states"
-                                options={states}
-                                renderInput={(params) => (
-                                    <TextField {...params} label="State" />
-                                )}
-                                sx={{ marginTop: '10px', width: '100%' }}
-                                onChange={(e, newValue) => {
-                                    setState(newValue);
-                                }}
-                            />
-                            <TextField
                                 required
-                                id="outlined-postal"
-                                label="Postal Code"
-                                variant="outlined"
-                                className="address-input"
-                                sx={{ marginTop: '10px', width: '100%' }}
-                                error={postalError}
+                                className="name-input"
+                                sx={{ width: '100%' }}
                                 onChange={(e) => {
-                                    setPostalError(false);
-                                    setPostalCode(e.target.value);
+                                    setNameError(false);
+                                    setName(e.target.value);
                                 }}
+                                error={nameError}
                             />
-                            {postalError ? (
-                                <p className="postal-error-message font-work text-red-700 mt-2">
-                                    Please enter a valid postal code.
+                            <TextField
+                                id="outlined-email"
+                                label="Email"
+                                variant="outlined"
+                                className="email-input"
+                                required
+                                sx={{ marginTop: '10px', width: '100%' }}
+                                onChange={(e) => {
+                                    setEmailError(false);
+                                    setEmailError(false);
+                                    setEmail(e.target.value);
+                                }}
+                                error={emailError}
+                            />
+                            {emailError ? (
+                                <p className="phone-error-message font-work text-red-700 mt-2">
+                                    Please enter a valid email address.
                                 </p>
                             ) : (
                                 ''
                             )}
+                            <TextField
+                                required
+                                id="outlined-phone"
+                                label="Phone"
+                                variant="outlined"
+                                className="phone-input"
+                                sx={{ marginTop: '10px', width: '100%' }}
+                                error={phoneError}
+                                onChange={(e) => {
+                                    setPhoneError(false);
+                                    setPhone(e.target.value);
+                                }}
+                            />
+                            {phoneError ? (
+                                <p className="phone-error-message font-work text-red-700 mt-2">
+                                    Please enter a valid phone number.
+                                </p>
+                            ) : (
+                                ''
+                            )}
+                            <div className="address-fields w-full">
+                                <TextField
+                                    id="outlined-basic"
+                                    label="Address"
+                                    variant="outlined"
+                                    className="address-input"
+                                    sx={{ marginTop: '10px', width: '100%' }}
+                                    onChange={(e) => {
+                                        setAddress(e.target.value);
+                                    }}
+                                />
+                                <TextField
+                                    id="outlined-city"
+                                    label="City"
+                                    variant="outlined"
+                                    className="address-input"
+                                    sx={{ marginTop: '10px', width: '100%' }}
+                                    onChange={(e) => {
+                                        setCity(e.target.value);
+                                    }}
+                                />
+                                <Autocomplete
+                                    disablePortal
+                                    id="states"
+                                    options={states}
+                                    renderInput={(params) => (
+                                        <TextField {...params} label="State" />
+                                    )}
+                                    sx={{ marginTop: '10px', width: '100%' }}
+                                    onChange={(e, newValue) => {
+                                        setState(newValue);
+                                    }}
+                                />
+                                <TextField
+                                    required
+                                    id="outlined-postal"
+                                    label="Postal Code"
+                                    variant="outlined"
+                                    className="address-input"
+                                    sx={{ marginTop: '10px', width: '100%' }}
+                                    error={postalError}
+                                    onChange={(e) => {
+                                        setPostalError(false);
+                                        setPostalCode(e.target.value);
+                                    }}
+                                />
+                                {postalError ? (
+                                    <p className="postal-error-message font-work text-red-700 mt-2">
+                                        Please enter a valid postal code.
+                                    </p>
+                                ) : (
+                                    ''
+                                )}
+                            </div>
                         </div>
-                    </div>
+                    </FormControl>
                 )}
             </div>
             <button
