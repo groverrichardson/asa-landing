@@ -276,7 +276,7 @@ function Contact() {
             </div>
             <button
                 type="submit"
-                className="bg-gradient-to-r from-secondary to-tertiary md:w-auto p-3 text-center text-lg iPhone:text-xl iPad:text-xl font-bold text-white font-work shadow-md rounded mt-4 w-full iPad:w-full max-w-xl">
+                className="bg-gradient-to-r from-secondary to-tertiary md:w-auto p-3 text-center text-lg iPhone:text-xl iPad:text-xl font-bold text-white font-work shadow-md rounded mt-4 w-full max-w-xl">
                 Submit
             </button>
         </form>
