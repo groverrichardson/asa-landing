@@ -29,7 +29,9 @@ function Hero() {
                         care so that you can enjoy the benefits of affordable
                         electricity.
                     </p>
-                    <Cta margin="mt-10" position="iPadPro:self-start" />
+                    <div className="cta-button-container max-w-xl w-full">
+                        <Cta margin="mt-10" position="iPadPro:self-start" />
+                    </div>
                 </div>
                 <div className="hero-img-container w-full object-cover object-left flex flex-column justify-center items-center relative">
                     <img
