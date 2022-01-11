@@ -141,163 +141,158 @@ function Contact() {
                 handleSubmit(e);
             }}>
             <div className="form-content-container max-w-xl flex flex-col justify-center items-center">
-                <a href="contact" id="contact" className="focus:outline-none">
-                    <div className="header-container">
-                        <header className="form-header text-3xl iPhoneX:text-4xl iPad:text-3xl font-work font-bold text-primary tracking-tighter laptopM:text-5xl">
-                            Get a Free Quote
-                        </header>
-                        <div className="decorative-line h-2 bg-gradient-to-r from-secondary to-tertiary mt-2 absolute self-start w-full -z-10"></div>
-                        <p className="contact-copy py-5 font-work font-semi-bold tracking-tight text-lg text-black xl:text-lg">
-                            Please fill out the form below and one of our ASA
-                            representatives will contact you shortly.
+                <div className="header-container">
+                    <header className="form-header text-3xl iPhoneX:text-4xl iPad:text-3xl font-work font-bold text-primary tracking-tighter laptopM:text-5xl">
+                        Get a Free Quote
+                    </header>
+                    <div className="decorative-line h-2 bg-gradient-to-r from-secondary to-tertiary mt-2 absolute self-start w-full -z-10"></div>
+                    <p className="contact-copy py-5 font-work font-semi-bold tracking-tight text-lg text-black xl:text-lg">
+                        Please fill out the form below and one of our ASA
+                        representatives will contact you shortly.
+                    </p>
+                    {displaySuccess === true ? (
+                        <p className="success-message mb-3 font-work text-primary font-bold text-2xl tracking-tight py-5">
+                            We have received your request. Someone will be in
+                            contact with you shortly.
                         </p>
-                        {displaySuccess === true ? (
-                            <p className="success-message mb-3 font-work text-primary font-bold text-2xl tracking-tight py-5">
-                                We have received your request. Someone will be
-                                in contact with you shortly.
+                    ) : (
+                        ''
+                    )}
+                </div>
+                {displaySuccess === true ? (
+                    ''
+                ) : (
+                    <div className=" w-full">
+                        <TextField
+                            id="outlined-name"
+                            label="Name"
+                            variant="outlined"
+                            required
+                            className="name-input"
+                            sx={{ width: '100%' }}
+                            onChange={(e) => {
+                                setNameError(false);
+                                setName(e.target.value);
+                            }}
+                            error={nameError}
+                        />
+                        <TextField
+                            id="outlined-email"
+                            label="Email"
+                            variant="outlined"
+                            className="email-input"
+                            required
+                            sx={{ marginTop: '10px', width: '100%' }}
+                            onChange={(e) => {
+                                setEmailError(false);
+                                setEmailError(false);
+                                setEmail(e.target.value);
+                            }}
+                            error={emailError}
+                        />
+                        {emailError ? (
+                            <p className="phone-error-message font-work text-red-700 mt-2">
+                                Please enter a valid email address.
                             </p>
                         ) : (
                             ''
                         )}
+                        <TextField
+                            required
+                            id="outlined-phone"
+                            label="Phone"
+                            variant="outlined"
+                            className="phone-input"
+                            sx={{ marginTop: '10px', width: '100%' }}
+                            error={phoneError}
+                            onChange={(e) => {
+                                setPhoneError(false);
+                                setPhone(e.target.value);
+                            }}
+                        />
+                        {phoneError ? (
+                            <p className="phone-error-message font-work text-red-700 mt-2">
+                                Please enter a valid phone number.
+                            </p>
+                        ) : (
+                            ''
+                        )}
+                        <div className="address-fields w-full">
+                            <TextField
+                                id="outlined-basic"
+                                label="Address"
+                                variant="outlined"
+                                className="address-input"
+                                sx={{
+                                    marginTop: '10px',
+                                    width: '100%',
+                                }}
+                                onChange={(e) => {
+                                    setAddress(e.target.value);
+                                }}
+                            />
+                            <TextField
+                                id="outlined-city"
+                                label="City"
+                                variant="outlined"
+                                className="address-input"
+                                sx={{
+                                    marginTop: '10px',
+                                    width: '100%',
+                                }}
+                                onChange={(e) => {
+                                    setCity(e.target.value);
+                                }}
+                            />
+                            <Autocomplete
+                                disablePortal
+                                id="states"
+                                options={states}
+                                renderInput={(params) => (
+                                    <TextField {...params} label="State" />
+                                )}
+                                sx={{
+                                    marginTop: '10px',
+                                    width: '100%',
+                                }}
+                                onChange={(e, newValue) => {
+                                    setState(newValue);
+                                }}
+                            />
+                            <TextField
+                                required
+                                id="outlined-postal"
+                                label="Postal Code"
+                                variant="outlined"
+                                className="address-input"
+                                sx={{
+                                    marginTop: '10px',
+                                    width: '100%',
+                                }}
+                                error={postalError}
+                                onChange={(e) => {
+                                    setPostalError(false);
+                                    setPostalCode(e.target.value);
+                                }}
+                            />
+                            {postalError ? (
+                                <p className="postal-error-message font-work text-red-700 mt-2">
+                                    Please enter a valid postal code.
+                                </p>
+                            ) : (
+                                ''
+                            )}
+                        </div>
                     </div>
-                    {displaySuccess === true ? (
-                        ''
-                    ) : (
-                        <FormControl>
-                            <div className=" w-full">
-                                <TextField
-                                    id="outlined-name"
-                                    label="Name"
-                                    variant="outlined"
-                                    required
-                                    className="name-input"
-                                    sx={{ width: '100%' }}
-                                    onChange={(e) => {
-                                        setNameError(false);
-                                        setName(e.target.value);
-                                    }}
-                                    error={nameError}
-                                />
-                                <TextField
-                                    id="outlined-email"
-                                    label="Email"
-                                    variant="outlined"
-                                    className="email-input"
-                                    required
-                                    sx={{ marginTop: '10px', width: '100%' }}
-                                    onChange={(e) => {
-                                        setEmailError(false);
-                                        setEmailError(false);
-                                        setEmail(e.target.value);
-                                    }}
-                                    error={emailError}
-                                />
-                                {emailError ? (
-                                    <p className="phone-error-message font-work text-red-700 mt-2">
-                                        Please enter a valid email address.
-                                    </p>
-                                ) : (
-                                    ''
-                                )}
-                                <TextField
-                                    required
-                                    id="outlined-phone"
-                                    label="Phone"
-                                    variant="outlined"
-                                    className="phone-input"
-                                    sx={{ marginTop: '10px', width: '100%' }}
-                                    error={phoneError}
-                                    onChange={(e) => {
-                                        setPhoneError(false);
-                                        setPhone(e.target.value);
-                                    }}
-                                />
-                                {phoneError ? (
-                                    <p className="phone-error-message font-work text-red-700 mt-2">
-                                        Please enter a valid phone number.
-                                    </p>
-                                ) : (
-                                    ''
-                                )}
-                                <div className="address-fields w-full">
-                                    <TextField
-                                        id="outlined-basic"
-                                        label="Address"
-                                        variant="outlined"
-                                        className="address-input"
-                                        sx={{
-                                            marginTop: '10px',
-                                            width: '100%',
-                                        }}
-                                        onChange={(e) => {
-                                            setAddress(e.target.value);
-                                        }}
-                                    />
-                                    <TextField
-                                        id="outlined-city"
-                                        label="City"
-                                        variant="outlined"
-                                        className="address-input"
-                                        sx={{
-                                            marginTop: '10px',
-                                            width: '100%',
-                                        }}
-                                        onChange={(e) => {
-                                            setCity(e.target.value);
-                                        }}
-                                    />
-                                    <Autocomplete
-                                        disablePortal
-                                        id="states"
-                                        options={states}
-                                        renderInput={(params) => (
-                                            <TextField
-                                                {...params}
-                                                label="State"
-                                            />
-                                        )}
-                                        sx={{
-                                            marginTop: '10px',
-                                            width: '100%',
-                                        }}
-                                        onChange={(e, newValue) => {
-                                            setState(newValue);
-                                        }}
-                                    />
-                                    <TextField
-                                        required
-                                        id="outlined-postal"
-                                        label="Postal Code"
-                                        variant="outlined"
-                                        className="address-input"
-                                        sx={{
-                                            marginTop: '10px',
-                                            width: '100%',
-                                        }}
-                                        error={postalError}
-                                        onChange={(e) => {
-                                            setPostalError(false);
-                                            setPostalCode(e.target.value);
-                                        }}
-                                    />
-                                    {postalError ? (
-                                        <p className="postal-error-message font-work text-red-700 mt-2">
-                                            Please enter a valid postal code.
-                                        </p>
-                                    ) : (
-                                        ''
-                                    )}
-                                </div>
-                            </div>
-                        </FormControl>
-                    )}
-                </a>
+                )}
             </div>
-            <button
-                type="submit"
-                className="bg-gradient-to-r from-secondary to-tertiary md:w-auto p-3 text-center text-lg iPhone:text-xl iPad:text-xl font-bold text-white font-work shadow-md rounded mt-4 w-full max-w-xl">
-                Submit
-            </button>
+            <div className="submit-button-container max-w-xl w-full">
+                <button
+                    type="submit"
+                    className="bg-gradient-to-r from-secondary to-tertiary md:w-full p-3 text-center text-lg iPhone:text-xl iPad:text-xl font-bold text-white font-work shadow-md rounded mt-4">
+                    Submit
+                </button>
+            </div>
         </form>
     );
 }
